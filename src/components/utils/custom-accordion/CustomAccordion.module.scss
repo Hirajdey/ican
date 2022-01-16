@@ -1,0 +1,32 @@
+.main{
+    background-color: lightblue;
+    margin-bottom: 15px;
+    overflow: hidden;
+    .header{
+        border-bottom: solid 1px #000;
+        padding: 10px;
+        background-color: lightblue;
+        position: relative;
+        z-index: 1;
+    }
+    .collapse{
+        padding: 10px;
+        height: 0;
+        overflow: hidden;
+        transition: height 1000ms, top 1000ms;
+        -webkit-transition: height 1000ms, top 1000ms;
+        -moz-transition: height 1000ms, top 1000ms; 
+        position: relative;
+        top:-100px;
+        &.open{
+            height: max-content;
+            top:0;
+            transition: height 1000ms, top 1000ms;
+            -webkit-transition: height 1000ms, top 1000ms;
+            -moz-transition: height 1000ms, top 1000ms; 
+        }
+    }
+
+
+}
+
