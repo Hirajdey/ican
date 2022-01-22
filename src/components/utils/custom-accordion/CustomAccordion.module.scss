@@ -8,23 +8,35 @@
         background-color: lightblue;
         position: relative;
         z-index: 1;
+        cursor: pointer;
+        .plusMinus{
+            margin-left: 50px;
+            .minus{
+                font-size: 40px;
+            }
+            .plus{
+                font-size: 30px;
+            }
+        }
     }
     .collapse{
-        padding: 10px;
-        height: 0;
-        overflow: hidden;
-        transition: height 1000ms, top 1000ms;
-        -webkit-transition: height 1000ms, top 1000ms;
-        -moz-transition: height 1000ms, top 1000ms; 
+        transition: height 500ms;
+        -webkit-transition: height 500ms;
+        -moz-transition: height 500ms; 
         position: relative;
-        top:-100px;
         &.open{
-            height: max-content;
-            top:0;
-            transition: height 1000ms, top 1000ms;
-            -webkit-transition: height 1000ms, top 1000ms;
-            -moz-transition: height 1000ms, top 1000ms; 
+            transition: height 500ms;
+            -webkit-transition: height 500ms;
+            -moz-transition: height 500ms; 
         }
+
+        .collapseInner{
+            padding: 10px;
+        }
+        
+    }
+    .collapse.open.closed{
+        height: 0;
     }
 
 

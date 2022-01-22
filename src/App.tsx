@@ -7,7 +7,7 @@ import CustomAccordion from './components/utils/custom-accordion/CustomAccordion
 
 function App() {
   return (
-    <div className="">
+    <div>
 
     {faqs.map((faq,index) => (
       <CustomAccordion 
