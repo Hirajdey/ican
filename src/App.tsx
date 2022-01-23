@@ -1,30 +1,20 @@
 import React from 'react';
 import './App.css';
-import { faqs } from './components/constant'; 
-
-import CustomAccordion from './components/utils/custom-accordion/CustomAccordion';
+import {
+  BrowserRouter as Router, 
+  Routes, 
+  Route
+} from 'react-router-dom';
+import Home from './components/home/Home';
 
 
 function App() {
   return (
-    <div>
-
-    {faqs.map((faq,index) => (
-      <CustomAccordion 
-        id={index}
-        header={faq.title}
-        description={faq.description}
-        lists={faq.list}
-        body={<p>Hiraj</p>}
-        mainClass={''}
-        headerClass={''}
-        collapseClass={''}
-        listsClass={''}
-        bodyClass={''}
-      />
-    ) )}
-    
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>   
   );
 }
 
