@@ -3,6 +3,7 @@ import React from 'react'
 import { faqs } from '../../components/constant'; 
 import CustomAccordion from '../../components/utils/custom-accordion/CustomAccordion';
 import LinkIntExt from '../../components/utils/link-int-ext/LinkIntExt';
+import FormikComponents from '../formik-forms/FormikComponents';
 import YoutubeForm from '../formik-forms/YoutubeForm';
 import YoutubeFormUpdated from '../formik-forms/YoutubeFormUpdated';
 
@@ -46,8 +47,8 @@ const Home = () => {
             
             <YoutubeFormUpdated/>
             
+            <FormikComponents/>
             
-        
         </div>
     )
 }
