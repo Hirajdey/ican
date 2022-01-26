@@ -4,6 +4,7 @@ import { faqs } from '../../components/constant';
 import CustomAccordion from '../../components/utils/custom-accordion/CustomAccordion';
 import LinkIntExt from '../../components/utils/link-int-ext/LinkIntExt';
 import YoutubeForm from '../formik-forms/YoutubeForm';
+import YoutubeFormUpdated from '../formik-forms/YoutubeFormUpdated';
 
 
 const Home = () => {
@@ -43,6 +44,7 @@ const Home = () => {
             </h5>
             <YoutubeForm/>
             
+            <YoutubeFormUpdated/>
             
             
         
