@@ -6,6 +6,7 @@ import LinkIntExt from '../../components/utils/link-int-ext/LinkIntExt';
 import FormikComponents from '../formik-forms/FormikComponents';
 import YoutubeForm from '../formik-forms/YoutubeForm';
 import YoutubeFormUpdated from '../formik-forms/YoutubeFormUpdated';
+import FormikAdvance from '../formik-forms/FormikAdvance';
 
 
 const Home = () => {
@@ -47,7 +48,11 @@ const Home = () => {
             
             <YoutubeFormUpdated/>
             
+            <h5>Formik Components</h5>
             <FormikComponents/>
+            
+            <h5>Formik Advance</h5>
+            <FormikAdvance/>
             
         </div>
     )
