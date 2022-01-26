@@ -60,20 +60,41 @@ function YoutubeForm() {
             <form onSubmit={formik.handleSubmit}>
                 <div className={Styles.formcontrol}>
                     <label htmlFor='name'>Name</label>
-                    <input type="text" id='name' name='name' onChange={formik.handleChange} value={formik.values.name}/>
-                    {formik.errors.name && <span className={Styles.error}>{formik.errors.name}</span>}
+                    <input 
+                        type="text" 
+                        id='name' 
+                        name='name' 
+                        onChange={formik.handleChange} 
+                        onBlur={formik.handleBlur}
+                        value={formik.values.name}
+                    />
+                    {(formik.touched.name && formik.errors.name) && <span className={Styles.error}>{formik.errors.name}</span>}
                 </div>
                 
                 <div className={Styles.formcontrol}>
                     <label htmlFor='email'>E-mail</label>
-                    <input type="email" id='email' name='email' onChange={formik.handleChange} value={formik.values.email}/>
-                    {formik.errors.email && <span className={Styles.error}>{formik.errors.email}</span>}
+                    <input 
+                        type="email" 
+                        id='email' 
+                        name='email' 
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur} 
+                        value={formik.values.email}
+                    />
+                    {(formik.touched.email && formik.errors.email) && <span className={Styles.error}>{formik.errors.email}</span>}
                 </div>
                 
                 <div className={Styles.formcontrol}>
                     <label htmlFor='channel'>Channel</label>
-                    <input type="text" id='channel' name='channel' onChange={formik.handleChange} value={formik.values.channel} />
-                    {formik.errors.channel && <span className={Styles.error}>{formik.errors.channel}</span>}
+                    <input 
+                        type="text" 
+                        id='channel' 
+                        name='channel' 
+                        onChange={formik.handleChange} 
+                        onBlur={formik.handleBlur}
+                        value={formik.values.channel} 
+                    />
+                    {(formik.touched.channel && formik.errors.channel) && <span className={Styles.error}>{formik.errors.channel}</span>}
                 </div>
                 
                 <div>
