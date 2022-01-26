@@ -1,7 +1,9 @@
 import Styles from './YoutubeForm.module.scss'
 
 // hooks
-import { useFormik, FormikValues } from 'formik'
+import { useFormik } from 'formik'
+import * as Yup from 'yup'
+
 
 // interface InitialValuesProps{
 //     name: string;
@@ -21,36 +23,43 @@ const onSubmit = values => {
     );
 }
 
-const validate = values => {
-    //values.name values.email, values.channel
-    //errors.name, errors.email, errors.channel
-    //errors.name = 'this field is required'
+// const validate = values => {
+//     //values.name values.email, values.channel
+//     //errors.name, errors.email, errors.channel
+//     //errors.name = 'this field is required'
 
-    let errors = {}
+//     let errors = {}
 
-    if(!values.name){
-        errors.name = 'Name Required'
-    }
+//     if(!values.name){
+//         errors.name = 'Name Required'
+//     }
 
-    if(!values.email){
-        errors.email = 'Email Required'
-    }else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)){
-        errors.email = 'Invalid email format'   
-    }
+//     if(!values.email){
+//         errors.email = 'Email Required'
+//     }else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)){
+//         errors.email = 'Invalid email format'   
+//     }
 
-    if(!values.channel){
-        errors.channel = 'Channel Required'
-    }
+//     if(!values.channel){
+//         errors.channel = 'Channel Required'
+//     }
     
-    return errors;
-}
+//     return errors;
+// }
+
+const validationSchema = Yup.object({
+    name: Yup.string().required('Name required'),
+    email: Yup.string().email('Invalid email format').required('Email required'),
+    channel: Yup.string().required('Channel required')
+})
 
 function YoutubeForm() {
 
     const formik = useFormik({
         initialValues,
         onSubmit,
-        validate
+        validationSchema
+        // validate
     })
 
     // console.log('Form Errors', formik.errors)
