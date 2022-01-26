@@ -3,6 +3,7 @@ import React from 'react'
 import { faqs } from '../../components/constant'; 
 import CustomAccordion from '../../components/utils/custom-accordion/CustomAccordion';
 import LinkIntExt from '../../components/utils/link-int-ext/LinkIntExt';
+import YoutubeForm from '../formik-forms/YoutubeForm';
 
 
 const Home = () => {
@@ -13,16 +14,17 @@ const Home = () => {
             </h5>
             {faqs.map((faq,index) => (
                 <CustomAccordion 
-                id={index}
-                header={faq.title}
-                description={faq.description}
-                lists={faq.list}
-                body={<p>Hiraj</p>}
-                mainClass={''}
-                headerClass={''}
-                collapseClass={''}
-                listsClass={''}
-                bodyClass={''}
+                    id={index}
+                    header={faq.title}
+                    description={faq.description}
+                    lists={faq.list}
+                    body={<p>Hiraj</p>}
+                    mainClass={''}
+                    headerClass={''}
+                    collapseClass={''}
+                    listsClass={''}
+                    bodyClass={''}
+                    key={index}
                 />
             ) )}
 
@@ -35,6 +37,8 @@ const Home = () => {
                 Know More
             </LinkIntExt>
 
+            <YoutubeForm/>
+            
             
             
         
